@@ -1,4 +1,14 @@
 <h2>Course List</h2>
+
+<div class="form-group row">
+
+<label class="col-sm-1 col-form-label">Seacher</label>
+<div class="col-sm-5">
+      <input [(ngModel)]="filter" class="form-control font-italic" placeholder="Enter course name" >
+</div>
+
+</div>
+
 <table class="table table.striped">
    <thead>
        <tr>
@@ -13,7 +23,7 @@
     
    </thead>  
    <tbody>
-      <tr *ngFor='let course of courses'>
+      <tr *ngFor='let course of filteredCourses'>
         <td><img [src]="course.imageUrl" width="40px" height="40px"></td>
         <td>{{course.name}}</td>
         <td>{{course.price}}</td>
