@@ -1,4 +1,5 @@
-<div class="container">
+<app-nav-bar></app-nav-bar>
+<div class="container" mt-4>
   <!--{{title}}
   <br>
   {{name}}
@@ -8,6 +9,6 @@
   {{game}}
   <br>
   <input [(ngModel)]="game" name="game"> Two way data binding-->
+  <router-outlet></router-outlet>
   <br>
-  <app-course-list></app-course-list>
 </div>
